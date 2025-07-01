@@ -5,3 +5,15 @@ __pycache__/
 *.pyd
 .env
 .DS_Store
+
+# Ignore virtual environment
+venv/
+__pycache__/
+checkpoints/
+
+# Ignore tokenizers and metadata
+*.pkl
+
+
+
+

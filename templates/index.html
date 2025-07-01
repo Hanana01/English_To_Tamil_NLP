@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>English to Tamil Translator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            max-width: 90%;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333333;
+            margin-bottom: 20px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            resize: none;
+            font-size: 16px;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 25px;
+            background-color: #4a90e2;
+            color: white;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #357ab8;
+        }
+
+        h3 {
+            color: #444;
+            margin-top: 30px;
+        }
+
+        p {
+            background-color: #f1f1f1;
+            padding: 15px;
+            border-radius: 10px;
+            font-size: 18px;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>English to Tamil Translator</h1>
+        <form method="POST">
+            <textarea name="text" rows="4" placeholder="Enter English sentence..."></textarea><br>
+            <button type="submit">Translate</button>
+        </form>
+
+        {% if translation %}
+            <h3>Translated Tamil:</h3>
+            <p>{{ translation }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
